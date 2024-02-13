@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('company');
             $table->string('departure_station');
             $table->string('arrival_station');
-            $table->DATETIME('departure_time');
-            $table->DATETIME('arrival_time');
+            $table->dateTime('departure_time');
+            $table->dateTime('arrival_time');
             $table->integer('train_code')->unique();
-            $table->integer('carriages_number', 12);
+            $table->integer('carriages_number');
             $table->boolean('in_time')->default(true);
             $table->boolean('deleted')->default(false);
 

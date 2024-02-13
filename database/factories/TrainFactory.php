@@ -17,10 +17,10 @@ class TrainFactory extends Factory
     public function definition()
     {
         return [
-            'company'  => fake()->sentence(3),
-            'departure_station' =>  fake()->sentence(2),
-            'arrival_station' =>  fake()->sentence(2),
-            'departure_time' =>  fake()->dateTime(),
+            'company'  => fake()->sentence(3, false),
+            'departure_station' =>  fake()->sentence(2, false),
+            'arrival_station' =>  fake()->sentence(2, false),
+            'departure_time' =>  fake()->dateTimeBetween('now', '+3 days'),
             'arrival_time' =>  fake()->dateTime(),
             'train_code' =>  fake()->unique()->randomNumber(6, true),
             'carriages_number' =>  fake()->numberBetween(1, 12),

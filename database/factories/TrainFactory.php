@@ -23,7 +23,7 @@ class TrainFactory extends Factory
             'departure_time' =>  fake()->dateTime(),
             'arrival_time' =>  fake()->dateTime(),
             'train_code' =>  fake()->unique()->randomNumber(6, true),
-            'carriages_number' =>  fake()->randomNumber(12, true),
+            'carriages_number' =>  fake()->numberBetween(1, 12),
             'in_time' =>  fake()->boolean(),
             'deleted' =>  fake()->boolean()
         ];
